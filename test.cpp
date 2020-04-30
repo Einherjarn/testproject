@@ -1,8 +1,13 @@
 #include "date.h"
 
+TEST(days_gets_testcase, days_gets_test) {
+	Date date1(29, 4, 2020);
+	EXPECT_EQ(date1.get_day(), 29);
+	EXPECT_EQ(date1.get_month(), 4);
+	EXPECT_EQ(date1.get_year(), 2020);
+}
+
 TEST(days_between_testcase, days_between_test) {
-  EXPECT_EQ(1, 1);
-  EXPECT_TRUE(true);
   Date date1;
   EXPECT_EQ(date1.get_month(), 1);
   EXPECT_EQ(date1.days_between(2, 1, 1900), 1);
